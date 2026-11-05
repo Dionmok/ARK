@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ARK.Desktop/ARK.Desktop.csproj" />
+  <Project Path="ARK.MarketData/ARK.MarketData.csproj" />
+  <Project Path="ARK/ARK.Core.csproj" />
+</Solution>

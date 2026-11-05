@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.12" />
+    <!-- Keep Avalonia’s Linux D-Bus dependency on the patched 0.21 release. -->
+    <PackageReference Include="Tmds.DBus.Protocol" Version="0.21.3" />
+    <ProjectReference Include="../ARK/ARK.Core.csproj" />
+    <ProjectReference Include="../ARK.MarketData/ARK.MarketData.csproj" />
+  </ItemGroup>
+</Project>
