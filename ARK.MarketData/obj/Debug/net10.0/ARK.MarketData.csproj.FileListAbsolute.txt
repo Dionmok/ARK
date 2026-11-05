@@ -1,0 +1,15 @@
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\bin\Debug\net10.0\ARK.MarketData.deps.json
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\bin\Debug\net10.0\ARK.MarketData.dll
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\bin\Debug\net10.0\ARK.MarketData.pdb
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\bin\Debug\net10.0\ARK.Core.dll
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\bin\Debug\net10.0\ARK.Core.pdb
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.csproj.AssemblyReference.cache
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.AssemblyInfoInputs.cache
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.AssemblyInfo.cs
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.csproj.CoreCompileInputs.cache
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.Mark.AB732537.Up2Date
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.dll
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\refint\ARK.MarketData.dll
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ARK.MarketData.pdb
+C:\Users\ryand\source\repos\ARK\ARK.MarketData\obj\Debug\net10.0\ref\ARK.MarketData.dll
