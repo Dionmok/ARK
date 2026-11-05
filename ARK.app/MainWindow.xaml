@@ -1,0 +1,96 @@
+﻿<Window x:Class="ARK.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARK.App"
+        xmlns:avalonDock="https://github.com/Dirkster99/AvalonDock"
+        xmlns:charting="clr-namespace:ARK.Charting;assembly=ARK.Charting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF7C7C82">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Background="{DynamicResource Bg2Brush}" Foreground="{DynamicResource TextPrimaryBrush}">
+            <MenuItem x:Name="FileMenu" Header="_File">
+                <MenuItem Header="_New Chartbook" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Open Chartbook" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Close Chartbook" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Save Chartbook" Click="NotImplemented_Click"/>
+                <MenuItem Header="Save Chartbook _As..." Click="NotImplemented_Click"/>
+                <MenuItem Header="Save A_ll" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="Clos_e Chart" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="S_ave Chart" Click="NotImplemented_Click"/>
+                <MenuItem Header="Save C_hart As..." Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="E_xit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Copy Chart Values" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Download Historical Data..." Click="NotImplemented_Click"/>
+                <MenuItem Header="_Translate Symbols..." Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Reload Chart" Click="NotImplemented_Click"/>
+                <MenuItem Header="Edit C_hart..." Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Preferences..." Click="NotImplemented_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="ViewMenu" Header="_View">
+                <MenuItem Header="_Time and Sales" Click="TimeAndSales_Click"/>
+                <MenuItem Header="_DOM" Click="NotImplemented_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="TradeMenu" Header="Tr_ade">
+                <MenuItem Header="_Open Trade Window for Chart Symbol" Click="NotImplemented_Click"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Trend Line" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Horizontal Line" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Vertical Line" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Ray" Click="NotImplemented_Click"/>
+                <MenuItem Header="Horizontal _Ray" Click="NotImplemented_Click"/>
+                <MenuItem Header="E_xtended Line" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="Rec_tangle" Click="NotImplemented_Click"/>
+                <MenuItem Header="Extended Rectan_gle" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Ellipse / Circle" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Fibonacci Retracement" Click="NotImplemented_Click"/>
+                <MenuItem Header="Fibonacci E_xtension" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Gann Fan" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Pitchfork" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Anchored VWAP" Click="NotImplemented_Click"/>
+                <MenuItem Header="Draw _Volume Profile" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="Te_xt / Annotation" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Arrow" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Measure Tool" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="Show B_uy" Click="NotImplemented_Click"/>
+                <MenuItem Header="Show S_ell" Click="NotImplemented_Click"/>
+                <Separator/>
+                <MenuItem Header="_Delete All Drawings" Click="NotImplemented_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="MainSettingsMenu" Header="_Main Settings">
+            </MenuItem>
+            <MenuItem x:Name="ChartbooksMenu" Header="Chart_books">
+                <Separator/>
+                <MenuItem Header="_Save Chartbook Layout" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Reset Chartbook Layout" Click="NotImplemented_Click"/>
+                <MenuItem Header="_Duplicate Chartbook" Click="NotImplemented_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About ARK"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" Background="{DynamicResource Bg0Brush}"/>
+    </Grid>
+</Window>

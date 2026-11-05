@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="ARK.App.SettingsPages.AppearanceSettingsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             FontFamily="{DynamicResource UiFont}">
+    <StackPanel>
+        <TextBlock Text="Appearance"
+                   FontSize="18"
+                   Foreground="{DynamicResource TextPrimaryBrush}"
+                   Margin="0,0,0,16"/>
+
+        <TextBlock Text="Theme Colors"
+                   FontSize="13"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource TextPrimaryBrush}"
+                   Margin="0,0,0,8"/>
+
+        <Grid Margin="0,0,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Panel Background" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="Bg0Swatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="Bg0Swatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <Grid Margin="0,4,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Content Background" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="Bg1Swatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="Bg1Swatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <Grid Margin="0,4,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Menu / Header Background" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="Bg2Swatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="Bg2Swatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <Grid Margin="0,4,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Button Background" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="ButtonBgSwatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="ButtonBgSwatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <Grid Margin="0,4,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Primary Text" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="TextPrimarySwatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="TextPrimarySwatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <Grid Margin="0,4,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Secondary Text" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <Border Grid.Column="1" x:Name="TextSecondarySwatch" Width="32" Height="20" BorderBrush="Gray" BorderThickness="1"
+                    Cursor="Hand" MouseLeftButtonUp="TextSecondarySwatch_MouseLeftButtonUp"/>
+        </Grid>
+
+        <TextBlock Text="Font"
+                   FontSize="13"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource TextPrimaryBrush}"
+                   Margin="0,0,0,8"/>
+
+        <ComboBox x:Name="FontComboBox"
+                  Width="200"
+                  HorizontalAlignment="Left"
+                  Background="{DynamicResource Bg2Brush}"
+                  Foreground="{DynamicResource TextPrimaryBrush}"
+                  SelectionChanged="FontComboBox_SelectionChanged"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0,24,0,0">
+            <Button x:Name="SaveButton"
+                    Content="Save"
+                    Width="90"
+                    Padding="4"
+                    Margin="0,0,8,0"
+                    Click="SaveButton_Click"/>
+            <Button x:Name="ResetButton"
+                    Content="Reset to Defaults"
+                    Width="130"
+                    Padding="4"
+                    Click="ResetButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="ARK.App.PositionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Positions" Height="400" Width="700"
+        Background="{DynamicResource Bg0Brush}">
+    <Grid Background="{DynamicResource Bg1Brush}">
+        <DataGrid x:Name="PositionsGrid"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Background="{DynamicResource Bg1Brush}"
+                  Foreground="{DynamicResource TextPrimaryBrush}"
+                  RowBackground="{DynamicResource Bg1Brush}"
+                  BorderThickness="0"
+                  GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol}" Width="*"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="*"/>
+                <DataGridTextColumn Header="Account" Binding="{Binding AccountNumber}" Width="*"/>
+                <DataGridTextColumn Header="Order Type" Binding="{Binding OrderType}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

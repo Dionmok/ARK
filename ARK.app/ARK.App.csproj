@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <ImplicitUsings>disable</ImplicitUsings> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ARK.Charting\ARK.Charting.csproj" />
+    <ProjectReference Include="..\ARK.MarketData\ARK.MarketData.csproj" />
+    <ProjectReference Include="..\ARK\ARK.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dirkster.AvalonDock" Version="5.0.0" />
+    <PackageReference Include="Dirkster.AvalonDock.Themes.VS2013" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

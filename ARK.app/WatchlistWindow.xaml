@@ -1,0 +1,78 @@
+﻿<Window x:Class="ARK.App.WatchlistWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Watchlist" Height="500" Width="600"
+        Background="{DynamicResource Bg0Brush}">
+    <Grid Background="{DynamicResource Bg1Brush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0"
+                x:Name="FindSymbolButton"
+                Content="Find Symbol..."
+                HorizontalAlignment="Left"
+                Padding="8,4"
+                Margin="8"
+                Click="FindSymbolButton_Click"/>
+
+        <DataGrid Grid.Row="1"
+                  x:Name="WatchlistGrid"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Background="{DynamicResource Bg1Brush}"
+                  Foreground="{DynamicResource TextPrimaryBrush}"
+                  RowBackground="{DynamicResource Bg1Brush}"
+                  BorderThickness="0"
+                  GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol}" Width="*"/>
+                <DataGridTextColumn Header="Last" Binding="{Binding Last}" Width="*"/>
+                <DataGridTextColumn Header="Change" Binding="{Binding Change}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Change, Converter={StaticResource GreaterThanZeroConverter}}" Value="True">
+                                    <Setter Property="Foreground" Value="#3DA35D"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Change, Converter={StaticResource LessThanZeroConverter}}" Value="True">
+                                    <Setter Property="Foreground" Value="#C94F4F"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="% Change" Binding="{Binding PercentChange}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding PercentChange, Converter={StaticResource GreaterThanZeroConverter}}" Value="True">
+                                    <Setter Property="Foreground" Value="#3DA35D"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding PercentChange, Converter={StaticResource LessThanZeroConverter}}" Value="True">
+                                    <Setter Property="Foreground" Value="#C94F4F"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="*"/>
+                <DataGridTextColumn Header="High" Binding="{Binding High}" Width="*"/>
+                <DataGridTextColumn Header="Low" Binding="{Binding Low}" Width="*"/>
+                <DataGridTemplateColumn Width="40">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="✕"
+                                    Padding="4,0"
+                                    Click="RemoveSymbol_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
